@@ -1,11 +1,18 @@
 .rose {
-  
+  width: 600px;
   background-color: MistyRose;
 }
 .mint {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 700px;
   background-color: MintCream;
 }
 .midnight {
+    position:relative;
+    top: 0; 
+    right:0; 
   color: white;
   background-color: MidnightBlue;
 } 
@@ -14,12 +21,16 @@
   border-style: none;
   border-radius: 8px;
   margin: 16px;
-  padding: 32px;
+  padding: 30px;
 }
-.font_cursive {
+.font_cursive {  
   font-family: 'Square Peg', cursive;
+  font-size: 30px;
+  margin-top: 0 ;
 }
 
-.picwidth {
+.pic_width {
   width: 250px;
 }
+
+
