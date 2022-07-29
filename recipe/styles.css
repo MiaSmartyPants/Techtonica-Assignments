@@ -1,18 +1,16 @@
 .rose {
-  width: 600px;
+  
   background-color: MistyRose;
 }
 .mint {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 700px;
+ float:left;
+  width: 600px;
   background-color: MintCream;
 }
-.midnight {
-    position:relative;
-    top: 0; 
-    right:0; 
+.midnight { 
+ 
+
+   width:600;
   color: white;
   background-color: MidnightBlue;
 } 
@@ -30,7 +28,7 @@
 }
 
 .pic_width {
-  width: 250px;
-}
+  width: 350px;
 
+}
 
