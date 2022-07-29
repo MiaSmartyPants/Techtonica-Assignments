@@ -1,0 +1,18 @@
+.rose {
+  
+  background-color: MistyRose;
+}
+.mint {
+  background-color: MintCream;
+}
+.midnight {
+  color: white;
+  background-color: MidnightBlue;
+} 
+
+.border_rounded {
+  border-style: none;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 32px;
+}
