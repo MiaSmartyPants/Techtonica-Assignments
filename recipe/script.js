@@ -16,6 +16,7 @@ btn1.addEventListener("click", function () {
   }
 });
 
+
 btn2.addEventListener("click", function () {
   if (btn1.classList.contains("purple")) {
     btn1.classList.remove("purple");
