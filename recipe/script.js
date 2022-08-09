@@ -1,6 +1,10 @@
 const btn1 = document.querySelector("#purple");
+
 const btn2 = document.querySelector("#red");
+
 const likes = document.querySelector(".like_count");
+
+
 let likesOverall = 3; // has to change once i figure out how to add likes from all users
 let likeCount = 0;
 likes.innerHTML = "Likes: " + likesOverall;
