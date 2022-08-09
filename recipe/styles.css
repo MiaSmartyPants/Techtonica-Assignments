@@ -1,0 +1,84 @@
+.rose {
+  
+  background-color: MistyRose;
+}
+.mint {
+ 
+  background-color: MintCream;
+}
+.midnight { 
+
+  color: white;
+  background-color: MidnightBlue;
+} 
+
+.border_rounded {
+  border-style: none;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 30px;
+}
+.font_cursive {  
+  font-family: 'Square Peg', cursive;
+  font-size: 30px;
+  margin-top: 0 ;
+}
+
+.pic_width {
+  max-width: 250px;
+  padding: 10px;
+
+}
+
+
+
+
+button{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.purple{
+  color: rgb(189, 30, 221);
+}
+
+.red{
+  color: rgb(223, 75, 6);
+}
+/*.topnav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: purple;
+}*/
+@media only screen and (maxwidth :1080px){
+  img{
+    max-width: 300px;
+  }
+  p{
+    max-width: 50px;
+  }
+  .description{
+    max-width: 50px;
+  }
+  .topnav{
+    float: center;
+  }
+  .midnight{
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media(min-width:700px){
+  body{
+    background-color: blanchedalmond;
+  }
+}
