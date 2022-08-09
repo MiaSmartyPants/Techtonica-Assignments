@@ -1,7 +1,5 @@
 const btn1 = document.querySelector("#purple");
-
 const btn2 = document.querySelector("#red");
-
 const likes = document.querySelector(".like_count");
 
 
