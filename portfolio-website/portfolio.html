@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mia's Portfolio</title>
+    <link href="portfolio.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/74fae3b4a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container-fluid p-5 my-5 border">
+      <h2>About me</h2>
+      <div>
+        <img
+          src="portfolioimage.JPG"
+          alt="image of Mia, a black girl, with a high bun and eyelashes."
+          style="width: 300px"
+        />
+        <p>
+          Im mia and my pronouns are she/her. I have a background in sales and
+          service. Working in this field gave me the skill of understanding many
+          sides and perspectives which translates into communicating well and
+          seeing many solution to a problem . My main interests in tech is the
+          overlap between engineering and neuroscience, but been hard for me to
+          get into tech because of the difficulty in navigating the education
+          system. So In college i already knew i liked to study engineering ,
+          but when i found out how to become an engineer, i experienced
+          financial hardship and had to stop my education. Thats when i started
+          searching for alternatives to college and i found techtonica. Which Im
+          excited about because it gets me closer to my goal of pushing the tech
+          industrys focus from personal use, to research about human growth in
+          the physics and neurology field .
+        </p>
+        <a
+          href="https://medium.com/techtonica/participant-story-mia-she-her-7f27c2899193"
+          target="_blank"
+          >Learn More About Me Here</a
+        >
+      </div>
+
+      <h2>Projects</h2>
+      <div class="project">
+        <a href='#' >BoeBot
+          <img
+            src="BoeBot.jpeg"
+            alt="an image of a vex robot car"
+            style="width: 200px"
+          />
+        </a>
+       
+        <a href="'#"
+          >The underworld
+          <img
+            src="underworld game.png"
+            alt="nighttime background with a blood moon and werewolf. a platform and a women character in the front"
+            style="width: 300px"
+          />
+        </a>
+      </div>
+
+      <h2>Conatct Me</h2>
+      <button onclick="toggle()">Contact Me!</button>
+      <form id="form">
+        <label for="fname"><span style="color: red">*</span>First name:</label
+        ><br />
+        <input type="text" id="fname" name="fname" required /><br />
+
+        <label for="lname"><span style="color: red">*</span>Last name:</label
+        ><br />
+        <input type="text" id="lname" name="lname" required /><br />
+
+        <label for="email"><span style="color: red">*</span>Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern=".+@.+\..+"
+        /><br />
+
+        <label for="pnum">Phone Number:</label><br />
+        <input type="text" id="pnum" name="pnum" /><br />
+
+        <label for="state">Select your state:</label><br />
+        <select name="state" size="1">
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">Dist of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+        <input type="submit" value="Submit" />
+      </form>
+
+      <a
+        href="https://www.linkedin.com/in/mia-dixon143/"
+        style="color: blue"
+        target="_blank"
+      >
+        <i class="fa-brands fa-linkedin-in fa-3x"></i>
+      </a>
+      <a
+        href="https://twitter.com/MiaDixo23200058"
+        style="color: rgb(32, 127, 235)"
+        target="_blank"
+      >
+        <i class="fa-brands fa-twitter fa-3x"></i>
+      </a>
+      <script src="portfolio.js"></script>
+    </div>
+  </body>
+</html>
