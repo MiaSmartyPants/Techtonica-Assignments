@@ -1,36 +1,32 @@
 *,
 *:before,
-*:after{
+*:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body {
     height: 100vh;
     background-color: rgb(246, 135, 172);
 }
-.container{
+.container {
     position: absolute;
     width: 50%;
     min-width: 580px;
     transform: -50%;
     top: 50%;
     left: 50%;
-    background: linear-gradient(
-        to right,
-        #27cb0a,
-        #dfdf1a
-    );
-    padding: 200px ;
+    background: linear-gradient(to right, #27cb0a, #dfdf1a);
+    padding: 200px;
     border-radius: 20px;
     display: grid;
     justify-items: center;
 }
-h3{
+h3 {
     font-size: 16px;
     font-weight: 600;
 }
-input[type="text"]{
+input[type="text"] {
     width: 90px;
     font-weight: 600;
     color: #cb0411;
@@ -41,7 +37,7 @@ input[type="text"]{
     border: 2px solid #202020;
     font-size: 28px;
 }
-button{
+button {
     width: 160px;
     padding: 15px 0;
     border-radius: 5px;
@@ -53,6 +49,6 @@ button{
     margin-bottom: 30px;
     outline: none;
 }
-p{
+p {
     font-weight: 400;
 }

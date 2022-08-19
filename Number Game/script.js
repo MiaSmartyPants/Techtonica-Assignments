@@ -7,7 +7,7 @@ let numOfGuesses = 0;
 let numbersUsed = [];
 
 function numberGame(){
-    var userGuess = document.getElementById("guess").value;
+    let  userGuess = document.getElementById("guess").value;
     if(userGuess < 1 || userGuess > 10){
         alert("Please enter a number between 1 and 10.");
     }
