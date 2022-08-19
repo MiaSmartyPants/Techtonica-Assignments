@@ -1,0 +1,13 @@
+.border {
+   padding: 30px;
+   margin: 16px;
+   border-color: aqua;
+   border-radius: 10px;
+   border-width: 10px;
+   border-style: double;
+}
+body {
+    background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/49/23/19/58/700_FO49231958_c7712731eead7a107a561286d61dca94.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-seamless-pink-background-vector-checkered-pattern-grid-texture.jpg.jpg');
+}
+
+
