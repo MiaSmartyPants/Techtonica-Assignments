@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.box {
+  font-weight: 800;
+  width: 100px;
+  height: 100px;
+  border: 5px solid black;
+  border-radius: 16px;
+  margin: 4px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.win {
+  background-color: pink;
+}
