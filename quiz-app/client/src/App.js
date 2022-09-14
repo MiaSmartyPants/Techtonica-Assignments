@@ -8,18 +8,25 @@ function App() {
   const [question, setQuestion] = useState("");
   const[error, setError]= useState("");
 // DEFINE here
-function getData() {
-  fetch("/localhost:PORT/miatrivia")
+async function getData() {
+  await fetch("http://localhost:5050/miatrivia")
   
   //return the response
-    .then((response) => console.log(response.json()))
+    .then((response) => response)
     // with the data that was return store it n a variable
     
     .then((data) => {
-      console.log(data, 'something');
-      setQuestion(data);
-    });
+     
+     
+      return data.json();
+      // setQuestion(data);
+    })
+
+    .then((data)=>console.log(data));
+
+    
    }
+
     // .catch (error => {
     //   console.error("Error fetching data: ", error);
     //   setError(error);

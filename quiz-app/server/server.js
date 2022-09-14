@@ -18,15 +18,15 @@ request('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=b
  (error, response, body) => {
   console.error('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', body); // Print the HTML for the Google homepage.
+  //console.log('body:', body); // Print the HTML for the Google homepage.
   //trivia = body;
-  const trivia = JSON.parse(body);
- console.log('trivia:', trivia); 
+   trivia = JSON.parse(body);
+ //console.log('trivia:', trivia); 
   
 });
  
 app.get('/miatrivia', (req, res) => {
- 
+ console.log("server", trivia);
   res.send(trivia)
 })
 
