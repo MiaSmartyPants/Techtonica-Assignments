@@ -8,8 +8,9 @@ import GetHighScore from "./components/GetHighScore";
 import Popup from './components/popup.js';
 import Timer from  './components/Timer.js';
 
-//put inside function to generate/display questionNumlater
-//make questionNum a state so it renders for the next page
+//put userAnswer inside a state variable so when i use it as conditional rendering the variable is available acrooss the app component
+// add song
+
 
 
 function App() {
@@ -55,26 +56,32 @@ useEffect(() => {
   
   
 },[])
+// need to set state before the next question is called , since im rendering the picture after the next question has been called, the rendering conditin is comparing with the next question instead of the current question
+const[userAnswer, setUserAnswer]=useState("");
+
+function correctAnswer(userButton){
 
 
-function correctAnswer(userAnswer){
-  if( userAnswer==results.correct_answer){//
+  if( userButton==results.correct_answer){//
     setCounter(counter+1)
+  setUserAnswer(userButton)
     getData();
-    console.log(questionNum)
+    console.log(questionNum);
 
+    
+  
+  
     //funfetti
   
   }else{
     setCounter(counter-1)
+    
      getData();
     console.log(questionNum)
   //something awful here
   }
+ 
  }
-
-
-
 
 
 
@@ -103,15 +110,32 @@ function correctAnswer(userAnswer){
 
 
 
+
+
+
+ 
+
+
+
+
   return (
     <div className="App">
+      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <h1>Trivia Game </h1>
-       <p>{results.question}</p>       
-       <button onClick={()=>correctAnswer("True")}>True</button>
-       <button onClick={()=>correctAnswer("False")}>False</button>
+      <br></br>
+       <p className="question">{results.question}</p>  
+
+
+       <button className="button" onClick={()=>correctAnswer("True")}>True</button>
+       <button className="button"  onClick={()=>correctAnswer("False")}>False</button>
+       
        <h2>Points: {counter}</h2>
         <Timer setIsOpen={setIsOpen} handleClick={handleClick} />
-      
+      { userAnswer==results.correct_answer && 
+      <img src="https://media1.giphy.com/media/y8Mz1yj13s3kI/giphy.gif?cid=ecf05e47qs1e8kvhypwn7vv9fhigfeotentv5le5ih7r89au&rid=giphy.gif&ct=g" />}
+      {/* { userAnswer==results.correct_answer && 
+        <img src="https://media0.giphy.com/media/YPsmTqYiHCMYtlsfKZ/200w.webp?cid=ecf05e47i746bpqaulj5ue0r60r5b6zfz3nhqpnx1lxt7a1b&rid=200w.webp&ct=g" />
+      } */}
     {isOpen && <Popup
       content={<>
         <b>Current Score {counter}</b>
@@ -120,8 +144,8 @@ function correctAnswer(userAnswer){
         <a href="/">   
         <button onClick={()=>{
          
-          setCounter(0);
-         handleClick();
+         setCounter(0);
+        //  handleClick();
           //  <timer />
         
           //controll the set timer statevariable from the parent component

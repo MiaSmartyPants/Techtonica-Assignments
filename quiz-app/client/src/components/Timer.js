@@ -1,7 +1,7 @@
 import react, {useRef,useEffect,useState} from 'react'
 
 
-function  Timer({setIsOpen, setTimerApp}){
+function  Timer({setIsOpen, handleClick}){
 
 // We need ref in this, because we are dealing
     // with JS setInterval to keep track of it and
@@ -10,12 +10,12 @@ function  Timer({setIsOpen, setTimerApp}){
   
     // The state for our timer
     const [timer, setTimer] = useState('00:00:10');
-    setTimerApp(timer)
+    //setTimerApp(timer)
     if(timer=== '00:00:00'){
         setIsOpen(true)
         
     }
-  setTimerApp(timer);
+  //handleClick(timer);
     const getTimeRemaining = (e) => {
         const total = Date.parse(e) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);
@@ -89,7 +89,7 @@ function  Timer({setIsOpen, setTimerApp}){
     }
 return (
 
-    <div>
+    <div className="timer">
             <h2>{timer}</h2>
        {/* <button onClick={onClickReset}>Reset</button> */}
     </div>
