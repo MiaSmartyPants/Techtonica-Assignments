@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
 import {useEffect} from 'react' 
-
+import GetHighScore from "./components/GetHighScore";
 import Popup from './components/popup.js';
 import Timer from  './components/Timer.js';
 
@@ -17,6 +17,14 @@ function App() {
   const [results, setResults] = useState("");
   const [counter, setCounter] = useState(0);
   const[error, setError]= useState("");
+  const[highScore, setHighScore] = useState(counter);
+  const{timer, setTimerApp} = useState();
+
+
+  const handleClick = (timer) => {
+    // 👇️ take parameter passed from Child component
+    setTimerApp(timer);
+  }
 // DEFINE here
 async function getData() {
   await fetch("http://localhost:5050/miatrivia")
@@ -87,6 +95,10 @@ function correctAnswer(userAnswer){
   //sethighscore=current score
 //disply"new high score!"}
 //else display highscore
+//instead of calling the home page
+// reset counter
+//reset time
+// so to keep the higscore from rreinitializing to counter whenever the function is called move the state initialize outside of the function so when the function is called it will check for the new high score and then update
 
 
 
@@ -98,15 +110,28 @@ function correctAnswer(userAnswer){
        <button onClick={()=>correctAnswer("True")}>True</button>
        <button onClick={()=>correctAnswer("False")}>False</button>
        <h2>Points: {counter}</h2>
-        <Timer setIsOpen={setIsOpen}/>
+        <Timer setIsOpen={setIsOpen} handleClick={handleClick} />
       
     {isOpen && <Popup
       content={<>
         <b>Current Score {counter}</b>
-        <p> High Score {counter} </p>
-        <a href="/">
-        <button{...setIsOpen(False)}>Play Again</button>
-        </a>
+        <GetHighScore counter={counter} setHighScore={setHighScore} highScore={highScore} />
+               
+        <a href="/">   
+        <button onClick={()=>{
+         
+          setCounter(0);
+         handleClick();
+          //  <timer />
+        
+          //controll the set timer statevariable from the parent component
+          //parent create a function
+          //pass that function to the child component
+          // child component call that function with the setvariable as the parameter
+          // setTimer('00:00:10') 
+          setIsOpen(false)
+          }}>Play Again</button>
+      </a>
       </>}
       handleClose={togglePopup}
     />}

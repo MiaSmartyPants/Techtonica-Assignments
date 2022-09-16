@@ -1,7 +1,7 @@
 import react, {useRef,useEffect,useState} from 'react'
 
 
-function  Timer({setIsOpen}){
+function  Timer({setIsOpen, setTimerApp}){
 
 // We need ref in this, because we are dealing
     // with JS setInterval to keep track of it and
@@ -9,13 +9,13 @@ function  Timer({setIsOpen}){
     const Ref = useRef(null);
   
     // The state for our timer
-    const [timer, setTimer] = useState('00:00:00');
-    
+    const [timer, setTimer] = useState('00:00:10');
+    setTimerApp(timer)
     if(timer=== '00:00:00'){
         setIsOpen(true)
         
     }
-  
+  setTimerApp(timer);
     const getTimeRemaining = (e) => {
         const total = Date.parse(e) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);
@@ -49,7 +49,8 @@ function  Timer({setIsOpen}){
         // If you adjust it you should also need to
         // adjust the Endtime formula we are about
         // to code next    
-        setTimer('00:00:20');
+        setTimer('00:00:10');
+       
   
         // If you try to remove this line the 
         // updating of timer Variable will be
