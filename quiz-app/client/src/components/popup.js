@@ -6,6 +6,7 @@ const Popup = ({handleClose, content}) => {
     <div className="popup-box">
       <div className="box">
         <span className="close-icon" onClick={handleClose}>x</span>
+        <br></br><br></br>
         {content}
       </div>
     </div>
