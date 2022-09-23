@@ -27,10 +27,11 @@ const getEventsById = (request, response) => {
 }
 
 const addEvent = (request, response) => {
-  const { title} = request.body; //, event_date, description
-  console.log(title)
+  
+  const { title, event_date} = request.body; //, event_date, description
+  console.log(request.body)
 
-  pool.query('INSERT INTO events (title) VALUES ($1)', [title], (error, results) => {//, event_date, description//, event_date, description
+  pool.query('INSERT INTO events (title, event_date) VALUES ($1, $2) RETURNING *', [title, event_date], (error, results) => {//, event_date, description//, event_date, description
     if (error) {
       throw error
     }
@@ -47,7 +48,8 @@ const deleteEvent = (request, response) => {
     if (error) {
       throw error
     }
-    response.status(200).json(results.rows)//.send(`User deleted with ID: ${id}`)
+    response.status(200).json(results.rows)
+    //response.send + request.query("Id")//.send(`User deleted with ID: ${id}`)
   })
 }
 module.exports = {

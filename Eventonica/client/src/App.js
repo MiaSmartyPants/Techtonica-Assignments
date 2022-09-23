@@ -38,15 +38,21 @@ let n = 0;
       setTitle(e.target.value);
       console.log(title)
     };
+    const [event_date, setDate] = useState('');
+     const updateDate = (e) => {
+      setDate(e.target.value);
+      console.log(event_date)
+    };
 
      function addEvent() {
        console.log(title)
+       console.log(event_date)
       fetch('http://localhost:5050/events', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({title}),
+        body: JSON.stringify({title,event_date}),
       })
         .then(response => {
           return response.text();
@@ -67,7 +73,7 @@ let n = 0;
    };
     function deleteEvent() {
       console.log(id)
-      fetch(`http://localhost:5050/events${id}`, {
+      fetch(`http://localhost:5050/events/${id}`, {
         method: 'DELETE',
         
       })
@@ -121,9 +127,14 @@ let n = 0;
                     id="add-event-name"
                      onChange={updateTitle}
                   />
+                  <label>Date</label>
+                  <input
+                    type="datetime-local"
+                    id="add-event-name"
+                     onChange={updateDate}/>
                 </fieldset>
-                {/* Add more form fields here */}
-                <input type="submit" />
+                <input type="submit" 
+             />
               </form >
             </div>
           </section>
