@@ -40,14 +40,14 @@ const addEvent = (request, response) => {
 }
 
 const deleteEvent = (request, response) => {
-  const id = parseInt(request.params.id)
-  console.log(id)
+  const id = (request.params.id)
+  console.log(request.params.id)
 
-  pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
+  pool.query('DELETE FROM events WHERE id = $1', [id], (error, results) => {
     if (error) {
       throw error
     }
-    response.status(200).json(results.rows)
+    response.status(200).json(results.rows)//.send(`User deleted with ID: ${id}`)
   })
 }
 module.exports = {
